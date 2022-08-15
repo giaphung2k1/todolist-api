@@ -25,13 +25,11 @@ php artisan serve
 ```
 # Public
 
-
 POST   /api/login
 @body: email, password
 
 POST   /api/register
 @body: name, email, password, password_confirmation
-
 
 # Protected
 
@@ -39,12 +37,10 @@ GET    /api/todolist
 
 GET    /api/todolist/search/{name}
 GET    /api//todolist/search/:name
-
 GET    /api/todolist/sortByName
 
 POST    api/todolist/store
 @body: name, level
-
 
 PUT     api/todolist/update/{id}
 @body: ?name, ?level, ?user_id
