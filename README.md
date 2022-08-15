@@ -25,8 +25,6 @@ php artisan serve
 ```
 # Public
 
-GET   /api/products
-GET   /api/products/:id
 
 POST   /api/login
 @body: email, password
@@ -37,13 +35,22 @@ POST   /api/register
 
 # Protected
 
-POST   /api/products
-@body: name, slug, description, price
+GET    /api/todolist
 
-PUT   /api/products/:id
-@body: ?name, ?slug, ?description, ?price
+GET    /api/todolist/search/{name}
+GET    /api//todolist/search/:name
 
-DELETE  /api/products/:id
+GET    /api/todolist/sortByName
+
+POST    api/todolist/store
+@body: name, level
+
+
+PUT     api/todolist/update/{id}
+@body: ?name, ?level, ?user_id
+
+DELETE  /api/todolist/destroy/:id
 
 POST    /api/logout
+
 ```

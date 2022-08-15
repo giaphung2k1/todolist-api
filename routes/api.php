@@ -26,14 +26,13 @@ Route::post('/login', [AuthController::class, 'login']);
 // Route::get('/products/{id}', [ProductController::class, 'show']);
 // Route::get('/products/search/{name}', [ProductController::class, 'search']);
 
-
+ 
 // Protected routes
 Route::group(['middleware' => ['auth:sanctum']], function () {
 
     Route::get('/todolist', [ToDoListController::class, 'index']);
     Route::post('/todolist/store', [ToDoListController::class, 'store']);
     Route::put('/todolist/update/{id}', [ToDoListController::class, 'update']);
-    Route::get('/todolist/search/{name}', [ToDoListController::class, 'search']);
     Route::get('/todolist/search/{name}', [ToDoListController::class, 'search']);
     Route::delete('/todolist/destroy/{id}', [ToDoListController::class, 'destroy']);
     Route::get('/todolist/sortByName', [ToDoListController::class, 'sort']);
